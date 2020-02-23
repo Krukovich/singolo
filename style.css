@@ -97,16 +97,14 @@ h1 {
     position: absolute;
     top: 53px;
     left: 111px;
-    box-shadow: 17px 15px 0 10px #ce5e57;
     border-radius: 27px;
 }
 
 .second-phone {
     position: absolute;
     top: 175px;
-    right: 135px;
+    right: 110px;
     border-radius: 25px;
-    box-shadow: 20px 15px 0 10px #ce5e57;
 }
 
 .slider-button-prev {
