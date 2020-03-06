@@ -1,0 +1,227 @@
+body,
+h1,
+ul,
+textarea,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: "Lato-Black", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 17px;
+    padding: 69px 0 0 39px;
+    color: #f0d8d9;
+}
+
+.section-quota {
+    background-color: #f06c64;
+}
+
+.section-quota__text {
+    font-family: "Lato-Light", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: justify;
+    word-spacing: -1px;
+    width: 939px;
+    color: #f0d8d9;
+    padding: 10px 0 0 41px;
+}
+
+.section-quota__text span {
+    word-spacing: -2px;
+}
+
+.colum-block {
+    display: flex;
+}
+
+.submit-btn {
+    font-family: "Lato-Light", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21.56px;
+    color: #f0d8d9;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+}
+
+.colum-block__form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 24px 0 0 41px;
+}
+
+.colum-block__form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.colum-block__form input {
+    width: 619px;
+    height: 38px;
+    background-color: #d6564f;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 14px;
+    transition: 0.5s;
+}
+.colum-block__form input:last-child {
+    margin-bottom: 9px;
+}
+
+.colum-block__form input:focus {
+    box-shadow: 1px 1px 3px 0 #fff;
+    transition: 0.5s;
+}
+
+.colum-block__form textarea {
+    width: 619px;
+    height: 202px;
+    background-color: #d6564f;
+    border: none;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    margin-bottom: 21px;
+    transition: 0.5s;
+}
+
+.colum-block__form textarea:focus {
+    box-shadow: 1px 1px 3px 0 #fff;
+    transition: 0.5s;
+}
+
+.colum-block__form textarea::placeholder {
+    font-family: "Lato-Regular", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #f48c8f;
+    padding: 6px 0 0 13px;
+}
+
+.colum-block__form input::placeholder {
+    font-family: "Lato-Regular", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #f48c8f;
+    padding:  0 0 0 15px;
+}
+
+.colum-block__contact {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.colum-block__contact-title {
+    font-family: "Lato-Black", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #f0d8d9;
+    padding: 26px 0 0 20px;
+}
+
+.colum-block__contact-text {
+    font-family: "Lato-Regular", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: justify;
+    word-spacing: -2px;
+    color: #f0d8d9;
+    width: 301px;
+    padding: 0 0 0 20px;
+}
+
+.colum-block__contact-main {
+    font-family: "Lato-Regular", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #f0d8d9;
+    list-style: none;
+    padding: 10px 0 0 22px;
+    word-spacing: -1px;
+}
+
+.first-img {
+    padding-right: 12px;
+}
+
+.second-img {
+    padding-right: 8px;
+}
+
+.third-img {
+    padding-right: 6px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #2d303a;
+}
+
+.footer-title {
+    font-family: "Lato-Regular", Arial, sans-serif;
+    font-size: 12px;
+    word-spacing: -2px;
+    color: #5e657e;
+    padding: 30px 0 32px 42px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social-icons {
+    display: flex;
+    padding: 21px 33px 0 0;
+}
+
+.footer-social__icon {
+    position: relative;
+    width: 31px;
+    height: 31px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+    margin: 0 7px 0 0;
+}
+
+.footer-social__icon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-social__icon:hover {
+    cursor: pointer;
+    border-color: #c5c5c5;
+    color: #c5c5c5;
+    box-shadow: 1px 1px 10px 1px;
+    transition: 0.5s;
+}
+
+.border-footer {
+    width: 1020px;
+    height: 6px;
+    background-color: #ea676b;
+}
