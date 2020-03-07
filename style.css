@@ -262,7 +262,7 @@ h1 {
     padding-left: 41px;
 }
 
-.portfolio-nav li {
+.portfolio-nav__item {
     font-family: "Lato-Regular", Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -276,11 +276,16 @@ h1 {
     transition: 0.5s;
 }
 
-.portfolio-nav li:hover {
+.portfolio-nav__item:hover {
     cursor: pointer;
     border-color: #c5c5c5;
     color: #c5c5c5;
     transition: 0.5s;
+}
+
+.portfolio-nav__item_active {
+    border-color: #c5c5c5;
+    color: #c5c5c5;
 }
 
 .portfolio-cards {
