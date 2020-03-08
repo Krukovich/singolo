@@ -198,6 +198,10 @@ h1 {
     margin: 9px 0 0 21px;
 }
 
+.block-content__title_word-move {
+    word-spacing: -2px;
+}
+
 .block-content__text {
     font-family: "Lato-Regular", "Arial", sans-serif;
     font-size: 12px;
@@ -369,6 +373,10 @@ h1 {
     padding: 11px 0 0 0;
     text-align: justify;
     color: #767e9e;
+}
+
+.card-text_first {
+    word-spacing: -2px;
 }
 
 .card-social {
@@ -560,6 +568,9 @@ h1 {
 }
 
 .third-img {
+    position: relative;
+    right: 1px;
+    top: 2px;
     padding-right: 6px;
 }
 
