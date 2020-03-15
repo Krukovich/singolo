@@ -19,19 +19,19 @@
             <nav class="navigation">
                 <ul class="navigation-list">
                     <li>
-                        <span class="navigation-list__item navigation-list__item_active">HOME</span>
+                        <a href="#header" class="navigation-list__item navigation-list__item_active">HOME</a>
                     </li>
                     <li>
-                        <span class="navigation-list__item">SERVICES</span>
+                        <a href="#services" class="navigation-list__item">SERVICES</a>
                     </li>
                     <li>
-                        <span class="navigation-list__item">PORTFOLIO</span>
+                        <a href="#portfolio" class="navigation-list__item">PORTFOLIO</a>
                     </li>
                     <li>
-                        <span class="navigation-list__item">ABOUT</span>
+                        <a href="#about" class="navigation-list__item">ABOUT</a>
                     </li>
                     <li>
-                        <span class="navigation-list__item">CONTACT</span>
+                        <a href="#contact" class="navigation-list__item">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -44,16 +44,22 @@
         <section class="slider" id="slider">
             <div class="wrapper">
                 <div class="slider-button-prev">
-                    <img src="assets/img/arrow-prev.png" alt="arrow">
+                    <img id="prevBtn" src="assets/img/arrow-prev.png" alt="arrow">
                 </div>
                 <div class="slider-content">
                     <figure>
-                        <img class="first-phone" src="assets/img/iPhone_Vertical.png" alt="iPhone_Vertical">
-                        <img class="second-phone" src="assets/img/iPhone_Horizontal.png" alt="iPhone_Horizontal">
+                        <div class="image-wrapper">
+                            <img class="first-phone" src="assets/img/slider/iPhone_Vertical.png" alt="iPhone_Vertical">
+                            <div class="mobile-vertical-display" id="vertical-display"></div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img class="second-phone" src="assets/img/slider/iPhone_Horizontal.png" alt="iPhone_Horizontal">
+                            <div class="mobile-horizontal-display" id="horizontal-display"></div>
+                        </div>
                     </figure>
                 </div>
                 <div class="slider-button-next">
-                    <img src="assets/img/arrow-next.png" alt="arrow">
+                    <img id="nextBtn" src="assets/img/arrow-next.png" alt="arrow">
                 </div>
                 <div class="border border-slider"></div>
             </div>
@@ -162,7 +168,7 @@
             </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="wrapper">
                 <div class="portfolio-header-title">
                     Portfolio
@@ -214,7 +220,7 @@
             </div>
         </section>
 
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="wrapper">
                 <div class="about-us__title">
                     About Us
@@ -320,7 +326,7 @@
             </div>
         </section>
 
-        <section class="section-quota">
+        <section class="section-quota" id="contact">
             <div class="wrapper">
                 <div class="title">
                     Get a Quote
@@ -335,12 +341,12 @@
                 <div class="section-quota-main-block">
                     <div class="colum-block">
                         <div class="colum-block__form">
-                            <form action="index.html">
+                            <form action="index.html" name="quota">
                                 <input type="text" placeholder="Name (Required)" required>
                                 <input type="email" placeholder="Email (Required)" required>
-                                <input type="text" placeholder="Subject">
-                                <textarea cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-                                <input class="submit-btn" type="submit" value="Send">
+                                <input type="text" name="subject" placeholder="Subject">
+                                <textarea cols="30" rows="10" name="describe" placeholder="Describe your project in detail..."></textarea>
+                                <input class="submit-btn" id="submit-btn" type="submit" value="Send">
                             </form>
                         </div>
                         <div class="colum-block__contact">
@@ -361,17 +367,35 @@
                                 </li>
                                 <li>
                                     <img class="second-img" src="assets/img/icons/phone2.png" alt="phone">
-                                    03528 331 86 35 
+                                    <a href="tel:+035283318635 ">03528 331 86 35 </a>
                                 </li>
                                 <li>
                                     <img class="third-img" src="assets/img/icons/mail.png" alt="mail">
-                                    info@singolo.com
+                                    <a href="mailto:info@singolo.com">info@singolo.com</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="border border-footer"></div>
+
+                <!-- Custom popup -->
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="modal-title">Письмо отправлено</span>
+                        <hr>
+                            <div class="modal-text">
+                                <div class="row">
+                                    <span class="modal-text__title">Тема:</span> <span id="subject">Singolo</span>
+                                </div>
+                                <div class="row">
+                                    <span class="modal-text__title">Описание:</span> <span id="describe">Portfolio project</span> 
+                                </div>
+                            </div>
+                        <hr>  
+                    </div>
+                    <button class="modal-close" id="modal-close" type="button">Ok</button>
+                 </div>
             </div>
         </section>
 
@@ -398,7 +422,8 @@
                 </div>
             </div>
         </footer>
-
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
