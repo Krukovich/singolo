@@ -154,10 +154,13 @@ window.onload = () => {
     // show popup
     try {
         document.getElementById("submit-btn").addEventListener("click", (event) => {
-            event.preventDefault();
-
             const result = {};
-            const form = document.forms.quota;
+            const form = document.forms.quote;
+
+            if (!form.checkValidity()) {
+                return
+            } 
+
             const elementsForm = [...form.elements];
             elementsForm.forEach(item => {
                 if (item.name === "subject") {
@@ -166,9 +169,12 @@ window.onload = () => {
                     (item.value === "") ?  result.describe = "Без описания" : result.describe = item.value;
                 }
             });
+
             document.getElementById("subject").innerHTML = result.subject;
             document.getElementById("describe").innerHTML = result.describe;
             [...document.getElementsByClassName("modal")][0].classList.add("modal_show");
+
+            event.preventDefault();
         });
         document.getElementById("modal-close").addEventListener("click", () => {
             [...document.getElementsByClassName("modal")][0].classList.remove("modal_show");

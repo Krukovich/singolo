@@ -478,11 +478,11 @@ h1 {
     color: #f0d8d9;
 }
 
-.section-quota {
+.section-quote {
     background-color: #f06c64;
 }
 
-.section-quota__text {
+.section-quote__text {
     font-family: "Lato-Light", Arial, sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -494,7 +494,7 @@ h1 {
     padding: 10px 0 0 41px;
 }
 
-.section-quota__text span {
+.section-quote__text span {
     word-spacing: -2px;
 }
 
@@ -704,7 +704,8 @@ h1 {
 }
 
 .modal_show {
-    display: block;
+    display: unset;
+    box-shadow: 0 0 0 5000px #0009;
 }
 
 .modal-text__title,
