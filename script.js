@@ -60,6 +60,18 @@ window.onload = () => {
         headerBlock.style.zIndex = "1";
     };
 
+    // fixed position header when user mousewheel
+    try {
+        document.addEventListener("wheel", () => {
+            if (document.getElementById("slider").getBoundingClientRect().top > -100) {
+                removeHeaderFixed();
+            } else {
+                headerFixed();
+            }
+        });
+    } catch (error) {
+        console.log(error);
+    }
 
     // move slider
     try {
