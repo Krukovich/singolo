@@ -102,7 +102,6 @@ window.onload = () => {
         }
     };
 
-
     // toggle mobile display
     try {
         const mobiles = [...document.getElementsByClassName("first-phone"), ...document.getElementsByClassName("second-phone")];
@@ -121,7 +120,6 @@ window.onload = () => {
         document.getElementsByClassName(`${tagName}`)[0].style.opacity = "0" : 
         document.getElementsByClassName(`${tagName}`)[0].style.opacity = "1";
     };
-
 
     // toggle portfolio tabs and change images order
     try {
@@ -148,7 +146,6 @@ window.onload = () => {
         });
     };
 
-
     // toggle border on images in portfolio 
     try {
         const images = [...document.getElementsByClassName("portfolio-cards__item")];
@@ -161,7 +158,6 @@ window.onload = () => {
     } catch (error) {
         console.log(error);
     }
-
 
     // show popup
     try {
@@ -183,7 +179,7 @@ window.onload = () => {
             });
 
             document.getElementById("subject").innerHTML = result.subject;
-            document.getElementById("describe").innerHTML = result.describe;
+            document.getElementById("describe").innerHTML = fixLengthLine(result.describe);
             [...document.getElementsByClassName("modal")][0].classList.add("modal_show");
 
             event.preventDefault();
@@ -194,5 +190,9 @@ window.onload = () => {
     } catch (error) {
         console.log(error);   
     }
+
+    const fixLengthLine = (line) => {
+        return line.substr(0, 256);
+    };
 };
 

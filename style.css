@@ -723,6 +723,10 @@ h1 {
     flex-direction: column;
 }
 
+#describe {
+    word-break: break-all;
+}
+
 .modal-close {
     margin: 10px;
     padding: 10px;
@@ -733,4 +737,8 @@ h1 {
     outline: none;
     border-radius: 5px;
     transition: 0.5s;
+}
+
+.modal-close:hover {
+    cursor: pointer;
 }
