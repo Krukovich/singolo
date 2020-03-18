@@ -6,6 +6,10 @@ figure {
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 h1 {
     font-family: "Lato-Black", "Arial", sans-serif;
     font-size: 30px;
@@ -98,8 +102,6 @@ h1 {
 }
 
 .slider_change {
-    background-image: url("./assets/img/slider/Slide-2.png");
-    background-repeat: no-repeat;
     background-color: #648BF0 !important;
 }
 
@@ -139,11 +141,20 @@ h1 {
     cursor: pointer;
 }
 
+.third-phone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -27px);
+    z-index: 1;
+}
+
 .slider-button-prev {
     position: absolute;
     top: 280px;
     left: 40px;
     transition: 0.5s;
+    z-index: 2;
 }
 
 .slider-button-prev:hover {
@@ -157,6 +168,7 @@ h1 {
     top: 282px;
     right: 40px;
     transition: 0.5s;
+    z-index: 2;
 }
 
 .slider-button-next:hover {
@@ -539,6 +551,7 @@ h1 {
     border-radius: 5px;
     margin-bottom: 14px;
     transition: 0.5s;
+    padding-left: 10px;
 }
 .colum-block__form input:last-child {
     margin-bottom: 5px;
@@ -559,6 +572,7 @@ h1 {
     border-radius: 5px;
     margin-bottom: 21px;
     transition: 0.5s;
+    padding-left: 10px;
 }
 
 .colum-block__form textarea:focus {

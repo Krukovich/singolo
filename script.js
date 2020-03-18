@@ -74,31 +74,72 @@ window.onload = () => {
     }
 
     // move slider
+    let slideIndex = 1;
+    showSlides(slideIndex, null);
+
     try {
         const nextBtn = document.getElementById("nextBtn");
-        nextBtn.addEventListener("click", () => {
-            changeSlider();
-        });
         const prevBtn = document.getElementById("prevBtn");
+
+        nextBtn.addEventListener("click", () => {
+            const flag = "right"
+            changeBackgroundColor();
+            showSlides(slideIndex += 1, flag);
+        });
+
         prevBtn.addEventListener("click", () => {
-            changeSlider();
+            const flag = "left"
+            changeBackgroundColor();
+            showSlides(slideIndex -= 1, flag);
         });
     } catch (error) {
         console.log(error);        
     }
 
-    const changeSlider = () => {
-        const imgArray = [...document.getElementsByClassName("image-wrapper")];
-        if (!document.getElementById("slider").classList.contains("slider_change")) {
-            imgArray.forEach(img =>{
-                img.style.display = "none"
-            });
-            document.getElementById("slider").classList.add("slider_change");
+    const changeBackgroundColor = () => {
+        const slider = document.getElementById("slider");
+        if (slider.classList.contains("slider_change")) {
+            slider.classList.remove("slider_change");
         } else {
-            imgArray.forEach(img =>{
-                img.style.display = "block";
-            });
-            document.getElementById("slider").classList.remove("slider_change");
+            slider.classList.add("slider_change");
+        }
+    };
+
+    function showSlides(count, flag) {
+        const slides = document.getElementsByClassName("image-wrapper");
+
+        if (count > slides.length) {
+            slideIndex = 1
+        }
+        if (count < 1) {
+            slideIndex = slides.length
+        }
+
+        if (flag === "right") {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = "translateX(200%)";
+                slides[i].style.transition = "1s";
+            }
+            slides[slideIndex - 1].style.transform = "translateX(0)";
+            slides[slideIndex - 1].style.transition = "1s";
+        }
+
+        if (flag === "left") {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = "translateX(-200%)";
+                slides[i].style.transition = "1s";
+            }
+            slides[slideIndex - 1].style.transform = "translateX(0)";
+            slides[slideIndex - 1].style.transition = "1s";
+        }
+
+        if (flag === null) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = "translateX(200%)";
+                slides[i].style.transition = "1s";
+            }
+            slides[slideIndex - 1].style.transform = "translateX(0)";
+            slides[slideIndex - 1].style.transition = "1s";
         }
     };
 
@@ -183,9 +224,13 @@ window.onload = () => {
             [...document.getElementsByClassName("modal")][0].classList.add("modal_show");
 
             event.preventDefault();
-        });
-        document.getElementById("modal-close").addEventListener("click", () => {
-            [...document.getElementsByClassName("modal")][0].classList.remove("modal_show");
+
+            document.getElementById("modal-close").addEventListener("click", () => {
+                [...document.getElementsByClassName("modal")][0].classList.remove("modal_show");
+                elementsForm.forEach(item => {
+                    if (item.type !== "submit") item.value = "";
+                });
+            });
         });
     } catch (error) {
         console.log(error);   
