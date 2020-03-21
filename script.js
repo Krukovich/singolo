@@ -50,14 +50,14 @@ window.onload = () => {
         const headerBlock = document.getElementById("header");
         headerBlock.style.position= "fixed";
         headerBlock.style.width = "100%";
-        headerBlock.style.zIndex = "1";
+        headerBlock.style.zIndex = "3";
     };
 
     const removeHeaderFixed = () => {
         const headerBlock = document.getElementById("header");
         headerBlock.style.position= "static";
         headerBlock.style.width = "100%";
-        headerBlock.style.zIndex = "1";
+        headerBlock.style.zIndex = "3";
     };
 
     // fixed position header when user mousewheel
