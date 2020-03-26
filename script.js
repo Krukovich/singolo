@@ -239,5 +239,24 @@ window.onload = () => {
     const fixLengthLine = (line) => {
         return line.substr(0, 256);
     };
+
+    // show and hidden mobile menu 
+    try {
+        const menu = [...document.getElementsByClassName("mobile-menu_hidden")][0];
+        document.getElementById("mobile-menu").addEventListener("click", () => {
+            menu.classList.add("mobile-menu_show");
+            [...document.getElementsByTagName("body")][0].style.overflow = "hidden";
+            document.getElementById("body").classList.add("fixed");
+        });
+        document.getElementById("mobile-menu-close").addEventListener("click", () => {
+            if (menu.classList.contains("mobile-menu_show")) {
+                menu.classList.remove("mobile-menu_show");
+                [...document.getElementsByTagName("body")][0].style.overflow = "scroll";
+                document.getElementById("body").classList.remove("fixed");
+            }
+        });
+    } catch (error) {
+        console.log(error);
+    }
 };
 
