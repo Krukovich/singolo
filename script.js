@@ -258,5 +258,42 @@ window.onload = () => {
     } catch (error) {
         console.log(error);
     }
+
+    // light link on scroll wheel
+    try {
+        const points = [];
+        const links = [...document.getElementsByClassName("navigation-list__item")];
+        links.forEach(nav => {
+            points.push(document.getElementById(nav.href.replace(/[^#]*(.*)/, "$1").slice(1)).offsetTop);
+        });
+        document.addEventListener("wheel", () => {
+            if (window.pageYOffset + 300 >= points[1]) {
+                removeLightLink(links);
+                links[1].classList.add("navigation-list__item_active");
+            }
+
+            if (window.pageYOffset + 300 >= points[2]) {
+                removeLightLink(links);
+                links[2].classList.add("navigation-list__item_active");
+            }
+
+            if (window.pageYOffset + 300 >= points[3]) {
+                removeLightLink(links);
+                links[3].classList.add("navigation-list__item_active");
+            }
+
+            if (window.pageYOffset + 300 >= points[4]) {
+                removeLightLink(links);
+                links[4].classList.add("navigation-list__item_active");
+            }
+
+            if (window.pageYOffset === 0) {
+                removeLightLink(links);
+                links[0].classList.add("navigation-list__item_active");
+            }
+        });
+    } catch (error) {
+        console.log(error);
+    } 
 };
 
