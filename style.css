@@ -940,7 +940,7 @@ h1 {
 
   .services-main-block__item {
     padding-bottom: 56px;
-    padding-right: 34px;
+    margin-right: 34px;
   }
 
   .border_bottom {
